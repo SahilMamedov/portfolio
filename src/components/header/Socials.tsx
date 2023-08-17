@@ -13,7 +13,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { NavLink } from "react-router-dom";
 import { MenuItemvariants } from "components/shared/MenuItemVariants";
-import ReactWhatsapp from "react-whatsapp";
 import WhatsappMessage from "components/shared/WhatsappMessage";
 const Socials = () => {
   return (

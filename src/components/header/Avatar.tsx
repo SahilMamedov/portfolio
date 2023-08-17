@@ -1,5 +1,3 @@
-import React from "react";
-import Photo from "../../public/assest/image/myPhoto.jpg";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import myPhoto from "assest/image/myPhoto.jpg";

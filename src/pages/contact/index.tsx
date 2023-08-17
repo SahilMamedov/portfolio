@@ -90,6 +90,7 @@ const Contact = () => {
           whileHover={SocialIconHover}
         >
           <iframe
+            title="myLocation"
             style={{ height: "100%", width: "100%", borderRadius: "8px" }}
             src="https://www.google.com/maps/embed/v1/place?q=Koroğlu,+Baku,+Azerbaijan&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
