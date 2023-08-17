@@ -1,8 +1,7 @@
 import { Particles } from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-import React, { useCallback } from "react";
-import styled from "styled-components";
+import { useCallback } from "react";
 
 const ParticlesContainer = () => {
   const particlesInit = useCallback(async (engine: any) => {
@@ -11,8 +10,7 @@ const ParticlesContainer = () => {
   const particlesLoaded = useCallback(async () => {}, []);
 
   return (
-    <div >
-      
+    <div>
       <div>
         <Particles
           className="h-full w-3/5 right-0 absolute traslate-z-0 z-0"
