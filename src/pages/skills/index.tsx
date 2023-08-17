@@ -20,6 +20,7 @@ import {
 const Skills = () => {
   const [skillRotate, setskillRotate] = useState(true);
   const [ExperienceRotate, setExperienceRotate] = useState(true);
+  const [open, setOpen] = useState<boolean>(true);
   return (
     <Container>
       <SkillTitle>My Skills</SkillTitle>
@@ -28,13 +29,17 @@ const Skills = () => {
           <ExperienceContainer experienceRotate={ExperienceRotate}>
             {ExperienceImages.map((img) => (
               <Tooltip
+                open={ExperienceRotate ? false : open}
                 placement="top"
+                onClose={() => setOpen(false)}
                 title={ExperienceRotate ? "" : `${img.tooltip}`}
+                disableHoverListener
               >
                 <ExperinceItem
                   translateValue={img.translateValue}
                   src={img.src}
                   bordercolor={img.borderColor}
+                  onClick={() => setOpen(true)}
                 />
               </Tooltip>
             ))}
