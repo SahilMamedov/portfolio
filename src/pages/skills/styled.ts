@@ -147,7 +147,7 @@ height: 600px;
 display: flex;
 justify-content: center;
 align-items: center;
-cursor: pointer;
+
 ${({ experienceRotate }) =>
         experienceRotate &&
         css`
@@ -166,6 +166,7 @@ ${({ experienceRotate }) =>
   @media only screen and (max-width: 425px) {
     width: 350px;
     height: 350px;
+    
   }
 `
 export const ExperienceImage=styled.img`
@@ -202,8 +203,8 @@ export const ExperienceItem=styled.img<Props>`
   padding: 6px;
   background-size: cover;
   background-position: center;
-  position: absolute;
-
+  cursor: pointer; 
+  
   ${({ translateValue }) =>
    `
     transform: translate(${translateValue});

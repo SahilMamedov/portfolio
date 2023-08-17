@@ -20,12 +20,14 @@ import {
 const Skills = () => {
   const [skillRotate, setskillRotate] = useState(true);
   const [ExperienceRotate, setExperienceRotate] = useState(true);
+  const [open, setOpen] = useState<boolean>(false);
   const [itemId, setItemId] = useState<number>(0);
 
   const handleClickExperience = () => {
     setExperienceRotate(!ExperienceRotate);
     if (ExperienceRotate) setItemId(0);
   };
+
   return (
     <Container>
       <SkillTitle>My Skills</SkillTitle>
