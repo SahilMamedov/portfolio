@@ -188,7 +188,7 @@ export const ExperienceBox = styled.div`
   justify-content: center;
 `;
 
-export const ExperinceItem=styled.img<Props>`
+export const ExperienceItem=styled.img<Props>`
  position: absolute;
   height: 100px;
   width: 100px;

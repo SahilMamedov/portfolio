@@ -11,7 +11,7 @@ import {
   SkillItem,
   ExperienceContainer,
   ExperienceImage,
-  ExperinceItem,
+  ExperienceItem,
   Container,
   SkillTitle,
   Wrapper,
@@ -20,7 +20,12 @@ import {
 const Skills = () => {
   const [skillRotate, setskillRotate] = useState(true);
   const [ExperienceRotate, setExperienceRotate] = useState(true);
-  const [open, setOpen] = useState<boolean>(true);
+  const [itemId, setItemId] = useState<number>(0);
+
+  const handleClickExperience = () => {
+    setExperienceRotate(!ExperienceRotate);
+    if (ExperienceRotate) setItemId(0);
+  };
   return (
     <Container>
       <SkillTitle>My Skills</SkillTitle>
@@ -29,24 +34,24 @@ const Skills = () => {
           <ExperienceContainer experienceRotate={ExperienceRotate}>
             {ExperienceImages.map((img) => (
               <Tooltip
-                open={ExperienceRotate ? false : open}
+                key={img.id}
+                open={itemId === img.id}
                 placement="top"
-                onClose={() => setOpen(false)}
                 title={ExperienceRotate ? "" : `${img.tooltip}`}
-                disableHoverListener
+                disableHoverListener={!img.tooltip}
               >
-                <ExperinceItem
+                <ExperienceItem
                   translateValue={img.translateValue}
                   src={img.src}
                   bordercolor={img.borderColor}
-                  onClick={() => setOpen(true)}
+                  onClick={() => setItemId(img.id)}
                 />
               </Tooltip>
             ))}
           </ExperienceContainer>
           <Tooltip placement="top" title={ExperienceRotate ? "" : "Experience"}>
             <ExperienceImage
-              onClick={() => setExperienceRotate(!ExperienceRotate)}
+              onClick={handleClickExperience}
               src={experinceImage}
             />
           </Tooltip>

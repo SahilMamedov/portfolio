@@ -95,48 +95,56 @@ export const SkillImages = [
 
 export const ExperienceImages = [
   {
+    id:1,
     src: csharp,
     borderColor: "#9b4794",
     tooltip: "C #",
     translateValue: "-0%,-200%",
   },
   {
+    id:2,
     src: dotnet,
     borderColor: "#5c2992",
     tooltip: "Asp. Net",
     translateValue: "150%,-150%",
   },
   {
+    id:3,
     src: motion,
     borderColor: "#f001b5",
     tooltip: "Framer Motion",
     translateValue: "210%",
   },
   {
+    id:4,
     src: jesttest,
     borderColor: "#3b3738",
     tooltip: "Jest Test",
     translateValue: "150%, 150%",
   },
   {
+    id:5,
     src: jquery,
     borderColor: "#ffffff",
     tooltip: "JQuery",
     translateValue: "-0%, 200%",
   },
   {
+    id:6,
     src: rtkquery,
     borderColor: "#6737b8",
     tooltip: "RTK-Query",
     translateValue: "-150%, 150%",
   },
   {
+    id:7,
     src: sql,
     borderColor: "#f7941e",
     tooltip: "SQL",
     translateValue: "-210%",
   },
   {
+    id:8,
     src: mantine,
     borderColor: "#339af0",
     tooltip: "Mantine UI",
