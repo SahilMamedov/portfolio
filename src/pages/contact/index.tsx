@@ -22,6 +22,7 @@ import { SocialIconHover, SocialIconTansition } from "components/header/styled";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
+
   const form = useRef();
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -42,7 +43,7 @@ const Contact = () => {
             });
           },
           () => {
-            toast.error("Mesajiniz gonderildi", {
+            toast.error("Mesajiniz gonderilmedi", {
               position: "bottom-right",
               autoClose: 2000,
               theme: "colored",
